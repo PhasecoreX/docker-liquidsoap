@@ -1,6 +1,6 @@
 FROM ocaml/opam:debian-12-ocaml-4.14 AS builder
 
-ENV PACKAGES="taglib mad lame vorbis cry samplerate opus fdkaac faad flac ocurl liquidsoap"
+ENV PACKAGES="taglib mad lame vorbis cry samplerate opus fdkaac faad flac ocurl liquidsoap sqlite3"
 
 USER root
 
