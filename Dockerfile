@@ -1,4 +1,4 @@
-FROM ocaml/opam:debian-13-ocaml-5.2 AS builder
+FROM ocaml/opam:debian-13-ocaml-4.14 AS builder
 
 ENV PACKAGES="mad lame vorbis samplerate opus fdkaac faad flac sqlite3 ffmpeg ssl liquidsoap"
 
