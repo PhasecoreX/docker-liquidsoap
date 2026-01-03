@@ -28,6 +28,9 @@ jobs:
       DOCK_SLUG: docker.io/phasecorex/liquidsoap
     steps:
       -
+        name: Free disk space
+        run: curl -fsSL https://raw.githubusercontent.com/kou/arrow/173e2fee5f6667b7e23f8bc6094936f6c6003039/ci/scripts/util_free_space.sh | bash
+      -
         name: Checkout
         uses: actions/checkout@v6
       -
