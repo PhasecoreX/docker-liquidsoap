@@ -32,7 +32,7 @@ jobs:
         run: curl -fsSL https://raw.githubusercontent.com/kou/arrow/173e2fee5f6667b7e23f8bc6094936f6c6003039/ci/scripts/util_free_space.sh | bash
       -
         name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       -
         name: Docker meta
         id: meta
@@ -54,7 +54,7 @@ jobs:
       -
         name: Login to GitHub Container Registry
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v4
+        uses: docker/login-action@v4.5.2
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -62,7 +62,7 @@ jobs:
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
-        uses: docker/login-action@v4
+        uses: docker/login-action@v4.5.2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
